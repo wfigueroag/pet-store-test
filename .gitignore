@@ -1,0 +1,242 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.exe
+*.o
+*.so
+
+
+#Intellij
+out/
+
+.idea/
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+#Gradle
+/.gradle/
+.gradle/5*
+.gradle/build*
+.gradle/vcs*
+.idea/**/gradle.xml
+.idea/**/libraries
+/build
+#Drivers
+drvers/
+
+#Serenity BDD
+target/
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.iws
+.sts4-cache/
+
+#Scala ID specific
+.cache-main
+.scala_dependencies
+.worksheet
+
+#Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+*.ctxt
+hs_err_pid*
+*.ear
+*.tar.gz
+*.war
+
+.idea/codestream.xml
+.idea/$CACHE_FILES$
+.idea/**/sonarIssues.xml
+.ide/**/sonarlint/
+.idea/**/markdown-navigator
+/.idea/
+
+# Others #
+
+/.gradle/
+/build/
+/bin/
+
+# Created by https://www.gitignore.io/api/gradle,jmeter,eclipse
+
+### Intelligent Idea ###
+# User-specific stuff:
+.idea
+.idea/**/tasks.xml
+.idea/dictionaries
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+# Gradle:
+.gradle
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+.build/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+# Ruby plugin and RubyMine
+/.rakeTasks
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### Intellij+all Patch ###
+# Ignores the whole idea folder
+# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
+
+.idea/
+
+
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+### Eclipse Patch ###
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+### JMeter ###
+# JMeter common ignore files
+# http://jmeter.apache.org/
+
+# Ignore Summary/Aggregrate reports
+*.jtl
+
+# Ignore log files
+*.log
+
+# Ignore customized user.properties
+user.properties
+/target/
+
+# End of https://www.gitignore.io/api/gradle,jmeter,eclipse
+/output/
+src/main/resources/jmeter/
+!/gradle/
+/.idea/
+
+# Files
+src/main/resources/resolutions/
+
+# -- Sistemas Operativos ------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.*
+!.gitignore
+!.htaccess
+*~

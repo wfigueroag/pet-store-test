@@ -1,0 +1,64 @@
+
+plugins {
+    id 'java'
+    id("net.serenity-bdd.serenity-gradle-plugin") version "4.0.0-beta-7"
+}
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '4.0.12'
+    lombokVersion = '1.18.22'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: "$rootProject.ext.serenityVersion"
+
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: "$rootProject.ext.serenityVersion"
+
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-screenplay
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "$rootProject.ext.serenityVersion"
+
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: "$rootProject.ext.serenityVersion"
+
+
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-screenplay-rest
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: "$rootProject.ext.serenityVersion"
+
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
+    implementation group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: "$rootProject.ext.serenityVersion"
+
+    // https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator
+    implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.4.0'
+
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20231013'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    implementation group: 'org.projectlombok', name: 'lombok', version: "$rootProject.ext.lombokVersion"
+    annotationProcessor("org.projectlombok:lombok:1.18.22")
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    systemProperties System.getProperties()
+    systemProperty  "cucumber.options", System.getProperty("cucumber.options")
+}
