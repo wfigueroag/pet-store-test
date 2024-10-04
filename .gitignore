@@ -21,12 +21,12 @@ out/
 
 #Gradle
 /.gradle/
-.gradle/5*
+.gradle/
 .gradle/build*
 .gradle/vcs*
 .idea/**/gradle.xml
 .idea/**/libraries
-/build
+build
 #Drivers
 drvers/
 
