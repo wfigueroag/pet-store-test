@@ -1,9 +1,32 @@
 name: CI Pipeline with Gradle on Windows 2
 
-on: push
+on:
+    push:
+        branches:
+            -main
+    pull_request:
+        branches:
+            -main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - run: echo "Workflow executed!"
+    build:
+        runs-on: windows-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Set up JDK
+              uses: actions/setup-java@v3
+              with:
+                  distribution: 'adopt'
+                  java-version: '19'
+
+            - name: Set up Gradle
+              uses: gradle/gradle-build-action@v2
+
+            - name: Build with Gradle
+              run: ./gradlew build
+
+            - name: Run tests with Gradle
+              run: ./gradlew test
