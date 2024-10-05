@@ -22,7 +22,7 @@ jobs:
                gradle-version: "8.5"
 
             - name: Build with Gradle with 8.5
-              run: ./gradlew build
+              run: gradle build
 
             - name: Run tests with Gradle
               run: ./gradlew test
