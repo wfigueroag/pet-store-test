@@ -21,6 +21,9 @@ jobs:
               with:
                gradle-version: "8.5"
 
+            - name: Set permissions for Gradlew
+              run: chmod +x ./gradlew
+
             - name: Build with Gradle with 8.5
               run: ./gradlew build
 
